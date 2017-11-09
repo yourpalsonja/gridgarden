@@ -40,7 +40,7 @@ var game = {
       }
 
       $('.treatment').fadeOut(1000, 'linear', function() {
-        $('.carrot, .weed').addClass('correct');
+        $('.lettuce, .weed').addClass('correct');
       });
       $('.arrow, #next').addClass('disabled');
 
@@ -222,7 +222,7 @@ var game = {
     var string = level.board;
     var markup = '';
     var colors = {
-      'c': 'carrot',
+      'c': 'lettuce',
       'w': 'weed'
     };
 
@@ -293,8 +293,8 @@ var game = {
 
     game.saveAnswer();
   },
-  
-  check: function() {    
+
+  check: function() {
     game.applyStyles();
 
     var level = levels[game.level];
@@ -349,7 +349,7 @@ var game = {
         input: $('#code').val(),
         result: 'correct'
       });
-            
+
       if ($.inArray(level.name, game.solved) === -1) {
         game.solved.push(level.name);
       }
